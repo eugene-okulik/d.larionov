@@ -3,7 +3,7 @@ my_dict = {
     'list': ['siemens', 'nokia', 'samsung', 'motorola', 'sony'],
     'dict': {'login': 'qwerty', 'passwd': '1234567', 'person': '1229977', 'agent_name': 'manager'},
     'set': {'rowenta', 'dreame', 'laifen', 'dewal', 'swift'}
-    }
+}
 print('=' * 90)
 print(my_dict['tuple'][-1])
 print('=' * 90)
