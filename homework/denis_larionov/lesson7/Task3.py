@@ -3,6 +3,7 @@ text_2 = 'результат операции: 54'
 text_3 = 'результат работы программы: 209'
 text_4 = 'результат: 2'
 
+
 def calculate(**kwargs):
     for x in kwargs.values():
         y = int(x.split(' ')[-1]) + 10
