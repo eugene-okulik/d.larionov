@@ -3,3 +3,4 @@ def print_dict(dict_):
     for i, x in dict_.items():
         print(i * x)
 print_dict(words)
+
