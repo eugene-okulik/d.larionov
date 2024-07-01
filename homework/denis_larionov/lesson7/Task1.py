@@ -9,5 +9,6 @@ def ugadayka():
             print('Please enter number again!')
             continue
     print('You cool!')
-ugadayka()
 
+
+ugadayka()
