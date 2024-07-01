@@ -7,8 +7,6 @@ def calculate(**kwargs):
     for x in kwargs.values():
         y = int(x.split(' ')[-1]) + 10
         print(y)
-
-
 calculate(text_1='результат операции: 42',
           text_2='результат операции: 54',
           text_3='результат работы программы: 209',
