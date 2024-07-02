@@ -28,4 +28,3 @@ for i in fibonachi():
         print('=' * 20)
         break
     count += 1
-    
