@@ -1,12 +1,10 @@
 def repeat(count):
 
-
     def funk_repeat(funk):
-
 
         def wrapper(*args):
             for i in range(count):
-                result = funk(*args)
+                funk(*args)
         return wrapper
     return funk_repeat
 

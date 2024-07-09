@@ -6,7 +6,6 @@ action = '-'
 
 def calculated(func):
 
-
     def wrapper(first, second, action):
         if first < 0 or second < 0:
             action = '*'
