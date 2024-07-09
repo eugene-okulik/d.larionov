@@ -1,6 +1,5 @@
 def hi_bob(func):
 
-
     def wrapper(*args, **kwargs):
         result = func(*args, **kwargs)
         print('You Cool, Bob!')
