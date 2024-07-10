@@ -3,7 +3,6 @@ class Book:
     page_material = 'бумага'
     presence_of_text = True
 
-
     def __init__(self, name_book, author, count_page, isbn, reserved):
         self.name_book = name_book
         self.author = author
@@ -11,9 +10,8 @@ class Book:
         self.isbn = isbn
         self.reserved = reserved
 
-
     def print_book(self):
-        if self.reserved == True:
+        if self.reserved is True:
             print(
                 'Название: {}, Автор: {}, Количество страниц: {}, Материал страниц: {}, Зарезервирована '
                 .format(self.name_book, self.author, self.count_page, self.page_material)
@@ -31,11 +29,10 @@ class SchoolBook(Book):
         super().__init__(name_book, author, count_page, isbn, reserved)
         self.lesson_subj = lesson_subj
         self.number_class = number_class
-        self.task = task
-    
+        self.task = task    
 
     def print_schoo_book(self):
-        if self.task == True:
+        if self.task is True:
             print(
                 'Название: {}, Автор: {}, Страниц: {}, Предмет: {}, Класс: {}, Зарезервирована'
                 .format(self.name_book, self.author, self.count_page, self.lesson_subj, self.number_class)
