@@ -15,12 +15,12 @@ class Book:
             print(
                 'Название: {}, Автор: {}, Количество страниц: {}, Материал страниц: {}, Зарезервирована '
                 .format(self.name_book, self.author, self.count_page, self.page_material)
-    )
+        )
         else:
             print(
                 'Название: {}, Автор: {}, Количество страниц: {}, Материал страниц: {}'
                 .format(self.name_book, self.author, self.count_page, self.page_material)
-    )
+        )
 
 
 class SchoolBook(Book):
@@ -36,12 +36,12 @@ class SchoolBook(Book):
             print(
                 'Название: {}, Автор: {}, Страниц: {}, Предмет: {}, Класс: {}, Зарезервирована'
                 .format(self.name_book, self.author, self.count_page, self.lesson_subj, self.number_class)
-    )
+        )
         else:
             print(
                 'Название: {}, Автор: {}, Страниц: {}, Предмет: {}, Класс: {}'
                 .format(self.name_book, self.author, self.count_page, self.lesson_subj, self.number_class)
-    )
+        )
 
 
 book1 = Book('Идиот', 'Достоевский', 500, 222222, True)
