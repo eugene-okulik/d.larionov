@@ -78,27 +78,30 @@ class Bouquet:
     def sortet_flowers(self):
         while True:
             question = int(input(
-                        "'Введите значение сортировки цетов в букете:\n"
-                        " 1 - сортировка по цвету\n"
-                        " 2 - сортировка по длине стебля\n"
-                        " 3 - сортировка по стоимости'\n"))
+                    "'Введите значение сортировки цетов в букете:\n"
+                    " 1 - сортировка по цвету\n"
+                    " 2 - сортировка по длине стебля\n"
+                    " 3 - сортировка по стоимости'\n"))
             if question == int(1):
-                print(flower_rose.colour, bouquet.count_rose, flower_lily.colour,
+                print(
+                    flower_rose.colour, bouquet.count_rose, flower_lily.colour,
                     bouquet.count_lyli, flower_orchid.colour, bouquet.count_orchid)
             elif question == int(2):
-                print(flower_rose.type_flower, flower_rose.long_steam, flower_lily.type_flower,
+                print(
+                    flower_rose.type_flower, flower_rose.long_steam, flower_lily.type_flower,
                     flower_lily.long_steam, flower_orchid.type_flower, flower_orchid.long_steam)
             elif question == int(3):
-                print(flower_rose.type_flower, flower_rose.price, flower_lily.type_flower,
+                print(
+                    flower_rose.type_flower, flower_rose.price, flower_lily.type_flower,
                     flower_lily.price, flower_orchid.type_flower, flower_orchid.price)
             break
 
     def search_flower(self):
         while True:
             question = int(input(
-                            "'Введите значение поиска цетов в букете:\n"
-                            " 1 - поиск по стоимости\n"
-                            " 2 - сортировка по длине стебля\n"))
+                    "'Введите значение поиска цетов в букете:\n"
+                    " 1 - поиск по стоимости\n"
+                    " 2 - сортировка по длине стебля\n"))
             if question == int(1):
                 qe = int(input('Введите желаемую стоимость: '))
                 if qe > 150:
