@@ -40,7 +40,7 @@ class Lyli(Flowers):
 
 class Orchid(Flowers):
     def __init__(self, type_flower, price, avg_lf_flowers, freshness, long_steam, colour, count):
-        super().__init__(type_flower, price, avg_lf_flowers, freshness, long_steam, colour,  count)
+        super().__init__(type_flower, price, avg_lf_flowers, freshness, long_steam, colour, count)
 
     def print_orchid(self):
         if self.freshness is True:
@@ -67,14 +67,12 @@ class Bouquet:
         return list_steam
 
     def price_bouquet(self):
-        print(
-            flower_rose.price * flower_rose.count +
-            flower_lily.price * flower_lily.count +
-            flower_orchid.price * flower_orchid.count
-            )
+        print(flower_rose.price * flower_rose.count
+            + flower_lily.price * flower_lily.count
+            + flower_orchid.price * flower_orchid.count)
 
     def life_bouquet(self):
-        lf_b = (flower_rose.avg_lf_flowers + flower_lily.avg_lf_flowers + flower_orchid.avg_lf_flowers)/3
+        lf_b = (flower_rose.avg_lf_flowers + flower_lily.avg_lf_flowers + flower_orchid.avg_lf_flowers) / 3
         print(round(lf_b))
 
     def sortet_flowers(self):
@@ -83,20 +81,16 @@ class Bouquet:
                             "'Введите значение сортировки цетов в букете:\n"
                             " 1 - сортировка по цвету\n"
                             " 2 - сортировка по длине стебля\n"
-                            " 3 - сортировка по стоимости'\n"
-                        ))
+                            " 3 - сортировка по стоимости'\n"))
             if question == int(1):
                 print(flower_rose.colour, bouquet.count_rose, flower_lily.colour,
-                       bouquet.count_lyli, flower_orchid.colour, bouquet.count_orchid
-                    )
+                       bouquet.count_lyli, flower_orchid.colour, bouquet.count_orchid)
             elif question == int(2):
                 print(flower_rose.type_flower, flower_rose.long_steam, flower_lily.type_flower,
-                      flower_lily.long_steam, flower_orchid.type_flower, flower_orchid.long_steam
-                    )
+                      flower_lily.long_steam, flower_orchid.type_flower, flower_orchid.long_steam)
             elif question == int(3):
                 print(flower_rose.type_flower, flower_rose.price, flower_lily.type_flower,
-                      flower_lily.price, flower_orchid.type_flower, flower_orchid.price
-                    )
+                      flower_lily.price, flower_orchid.type_flower, flower_orchid.price)
             break
 
     def search_flower(self):
@@ -104,8 +98,7 @@ class Bouquet:
             question = int(input(
                             "'Введите значение поиска цетов в букете:\n"
                             " 1 - поиск по стоимости\n"
-                            " 2 - сортировка по длине стебля\n"
-                        ))
+                            " 2 - сортировка по длине стебля\n"))
             if question == int(1):
                 qe = int(input('Введите желаемую стоимость: '))
                 if qe > 150:
