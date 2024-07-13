@@ -68,7 +68,7 @@ class Bouquet:
 
     def price_bouquet(self):
         print(flower_rose.price * flower_rose.count
-                + flower_lily.price * flower_lily.count
+            + flower_lily.price * flower_lily.count
                 + flower_orchid.price * flower_orchid.count)
 
     def life_bouquet(self):
