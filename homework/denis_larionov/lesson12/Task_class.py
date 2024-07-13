@@ -67,9 +67,10 @@ class Bouquet:
         return list_steam
 
     def price_bouquet(self):
-        print(flower_rose.price * flower_rose.count
+        print(
+            flower_rose.price * flower_rose.count
             + flower_lily.price * flower_lily.count
-                + flower_orchid.price * flower_orchid.count)
+            + flower_orchid.price * flower_orchid.count)
 
     def life_bouquet(self):
         lf_b = (flower_rose.avg_lf_flowers + flower_lily.avg_lf_flowers + flower_orchid.avg_lf_flowers) / 3
