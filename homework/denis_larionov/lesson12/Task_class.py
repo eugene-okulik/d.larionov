@@ -8,12 +8,13 @@ class Flowers:
         self.avg_lf_flowers = avg_lf_flowers
         self.freshness = freshness
         self.long_steam = long_steam
-        self.colour = colour    
+        self.colour = colour
 
     def __str__(self):
         return f'{self.__class__.__name__} Цветок: {self.type_flower}, ' \
             f'Цена: {self.price}, Срок годности: {self.avg_lf_flowers}, ' \
             f'Длина стебля: {self.long_steam}, Цвет: {self.colour}'
+
 
 class Rose(Flowers):
 
@@ -68,9 +69,9 @@ class Bouquet:
 
 
 fl_rose = Rose('Роза', 150, 15, True, 120, 'red')
-fl_lyli = Lyli('Лилия', 450, 10,True, 150, 'white')
+fl_lyli = Lyli('Лилия', 450, 10, True, 150, 'white')
 fl_orchid = Orchid('Орхидея', 550, 30, True, 110, 'Pink')
-b1= Bouquet()
+b1 = Bouquet()
 b1.new_bouquet(fl_lyli, fl_orchid, fl_rose, fl_lyli, fl_rose)
 b1.sorted_flowers_price()
 b1.sorted_fl_name()
