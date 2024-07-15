@@ -18,20 +18,20 @@ class Flowers:
 
 class Rose(Flowers):
 
-    def __init__(self, type_flower, price, avg_lf_flowers, freshness, long_steam, colour):
-        super().__init__(type_flower, price, avg_lf_flowers, freshness, long_steam, colour)
+    def __init__(self, price, avg_lf_flowers, freshness, long_steam, colour):
+        super().__init__('Роза', price, avg_lf_flowers, freshness, long_steam, colour)
 
 
 class Lyli(Flowers):
 
-    def __init__(self, type_flower, price, avg_lf_flowers, freshness, long_steam, colour):
-        super().__init__(type_flower, price, avg_lf_flowers, freshness, long_steam, colour)
+    def __init__(self, price, avg_lf_flowers, freshness, long_steam, colour):
+        super().__init__('Лилия', price, avg_lf_flowers, freshness, long_steam, colour)
 
 
 class Orchid(Flowers):
 
-    def __init__(self, type_flower, price, avg_lf_flowers, freshness, long_steam, colour):
-        super().__init__(type_flower, price, avg_lf_flowers, freshness, long_steam, colour)
+    def __init__(self, price, avg_lf_flowers, freshness, long_steam, colour):
+        super().__init__('Орхидея', price, avg_lf_flowers, freshness, long_steam, colour)
 
 
 class Bouquet:
@@ -52,27 +52,31 @@ class Bouquet:
 
     def avg_lf(self):
         price_b = [x.avg_lf_flowers for x in self.bouquet]
-        print(sum(price_b) / len(set(self.bouquet)))
+        print(sum(price_b) / len(self.bouquet))
 
     def sorted_flowers_price(self):
-        list_flowers = sorted([x.price for x in self.bouquet])
-        print(list_flowers)
+        self.bouquet.sort(key=lambda x: x.price)
+        for flower in self.bouquet:
+            print(flower)
 
     def sorted_fl_name(self):
-        list_name = sorted([x.type_flower for x in self.bouquet])
-        print(list_name)
+        self.bouquet.sort(key=lambda x: x.type_flower)
+        for flower in self.bouquet:
+            print(flower)
 
     def search_flower(self, y):
         list_flowers = list(filter(lambda x: x.avg_lf_flowers > int(y), self.bouquet))
         for flower in list_flowers:
-            print(flower.type_flower)
+            print(flower)
 
 
-fl_rose = Rose('Роза', 150, 15, True, 120, 'red')
-fl_lyli = Lyli('Лилия', 450, 10, True, 150, 'white')
-fl_orchid = Orchid('Орхидея', 550, 30, True, 110, 'Pink')
+fl_rose = Rose(150, 15, True, 120, 'red')
+fl_lyli = Lyli(450, 10, True, 150, 'white')
+fl_orchid = Orchid(550, 30, True, 110, 'Pink')
+fl_rose_1 = Rose(150, 15, True, 120, 'red')
+fl_lyli_1 = Lyli(450, 10, True, 150, 'white')
 b1 = Bouquet()
-b1.new_bouquet(fl_lyli, fl_orchid, fl_rose, fl_lyli, fl_rose)
+b1.new_bouquet(fl_lyli, fl_orchid, fl_rose, fl_rose_1, fl_lyli_1)
 b1.sorted_flowers_price()
 b1.sorted_fl_name()
 b1.search_flower(15)
