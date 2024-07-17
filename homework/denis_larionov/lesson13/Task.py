@@ -1,4 +1,3 @@
-from datetime import datetime
 import datetime
 import os
 
@@ -10,7 +9,7 @@ file_path = os.path.join(dir_path, 'eugene_okulik', 'hw_13', 'data.txt')
 
 
 def open_file(file_path):
-    with open (file_path, 'r', encoding = 'utf-8') as file_name:
+    with open(file_path, 'r', encoding='utf-8') as file_name:
         for line in file_name.readlines():
             yield line
 
