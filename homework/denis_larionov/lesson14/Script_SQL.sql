@@ -25,8 +25,8 @@ INSERT INTO marks (value, lesson_id, student_id) values
 (5, 4626, (select id from students WHERE name = 'Qiwi'));
 
 
-select value from marks where student_id = 1629;
-SELECT title from books WHERE taken_by_student_id = 1629;
+select value from marks where student_id = 1620;
+SELECT title from books WHERE taken_by_student_id = 1620;
 SELECT * from `groups` g join students s on
 (g.id = s.group_id) join books b on
 (b.taken_by_student_id = s.id) join marks m on
@@ -35,8 +35,6 @@ SELECT * from `groups` g join students s on
 (s2.id = l.subject_id) where s.id = 1629;
 
 INSERT INTO students (name, second_name) values ('Qiwi2', 'Pticsa2');
-SELECT * from students s where name = 'Qiwi2';
-update students set group_id = 1550 where name = 'Qiwi2';
-DELETE from books where id in (3106, 3105, 3104);
-UPDATE books set taken_by_student_id = 1629 where taken_by_student_id = 1620;
-UPDATE marks set student_id = 1629 where student_id = 1620
+UPDATE students set group_id = 1550 where id = 1629;
+select * from students s WHERE id = 1629;
+
