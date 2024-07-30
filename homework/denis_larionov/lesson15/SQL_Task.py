@@ -24,7 +24,7 @@ print(id_group)
 # Вносим студента в созданную группу
 cursor.execute(f"UPDATE students set group_id = {id_group} WHERE id = {id_new_student}")
 # Создаем книги
-cursor.execute(f"""INSERT INTO books (title, taken_by_student_id) values 
+cursor.execute(f"""INSERT INTO books (title, taken_by_student_id) values
     ('cool_book', {id_new_student}),
     ('fantasy_book', {id_new_student})""")
 # Создаем несколько учебных предметов
